@@ -495,8 +495,6 @@ const runnerEmails = runners.map(runner => runner.email);
 console.log(runnerEmails);
 
 // Problem 3
-// Judges need the total of each shirt size
-let shirtSizes = runners.reduce((total, runner) => {
-    return total += runner.shirt_size === 'S'
-}, 0);
-console.log(smallShirts);
+// Judges need Each members company name to send a thank you to
+let companies = runners.map(runner => runner.company_name);
+console.log(companies);

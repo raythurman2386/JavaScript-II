@@ -1,6 +1,14 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
-
+function sayHello() {
+  const say = function () {
+    console.log(hello);
+  }
+  const hello = 'Hello, world!';
+  return say;
+}
+const sayHelloClosure = sayHello();
+sayHelloClosure();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 

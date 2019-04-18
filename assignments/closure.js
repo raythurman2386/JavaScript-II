@@ -16,6 +16,12 @@ sayHelloClosure();
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
+  let num = 0;
+  const newCounter = () => {
+    counter++;
+    return counter;
+  }
+  return newCounter;
 };
 // Example usage: const newCounter = counter();
 // newCounter(); // 1

@@ -32,7 +32,7 @@ function getLength(arr, cb) {
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
-  return cb(arr.length) - 1;
+  return cb((arr.length) - 1);
 }
 
 function sumNums(x, y, cb) {
@@ -60,9 +60,8 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
-  let newArr = [];
-  for (let i = 0; i < array.length; i++) {
-
-  }
+  let newArr = array.filter(function (item, index, inputArray) {
+    return inputArray.indexOf(item) == index;
+  });
   return cb(newArr);
 }
